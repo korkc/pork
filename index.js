@@ -1,11 +1,10 @@
+// delete all unnecessary things
 let gameState = 'start';
 let paddle_1 = document.querySelector('.paddle_1');
 let paddle_2 = document.querySelector('.paddle_2');
 let board = document.querySelector('.board');
 let initial_ball = document.querySelector('.ball');
 let ball = document.querySelector('.ball');
-let score_1 = document.querySelector('.player_1_score');
-let score_2 = document.querySelector('.player_2_score');
 let message = document.querySelector('.message');
 let paddle_1_coord = paddle_1.getBoundingClientRect();
 let paddle_2_coord = paddle_2.getBoundingClientRect();
@@ -101,11 +100,6 @@ if (
     ball_coord.left <= board_coord.left ||
     ball_coord.right >= board_coord.right
 ) {
-    if (ball_coord.left <= board_coord.left) {
-    score_2.innerHTML = +score_2.innerHTML + 1;
-    } else {
-    score_1.innerHTML = +score_1.innerHTML + 1;
-    }
     gameState = 'start';
 
     ball_coord = initial_ball_coord;
