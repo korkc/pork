@@ -35,7 +35,7 @@ if (e.key == 'Enter') {
     }
 }
 if (gameState == 'play') {
-    if (e.key == 'w') {
+    if (activeKeys.has('KeyW') {
     paddle_1.style.top =
         Math.max(
         board_coord.top,
